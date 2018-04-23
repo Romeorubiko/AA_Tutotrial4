@@ -33,8 +33,8 @@ public class main
         
         boolean encontrado;
         
-        QLearning ql        = new QLearning(0, 0.6, 0.3, estados, acciones, 20, 4);
-        int ciclosMaximos   = 5;
+        QLearning ql        = new QLearning(0, 1, 0.3, estados, acciones, 20, 4);
+        int ciclosMaximos   = 9;
         int ciclos          = 0;
         int posicion;
 		
@@ -72,9 +72,11 @@ public class main
 		mapa.add(new Tupla(19, ARRIBA, 14, 0));
 		mapa.add(new Tupla(19, IZQUIERDA, 18, 0));
 /*
-		mapa.add(new Tupla(18, DERECHA, 19, 0));
-		mapa.add(new Tupla(18, DERECHA, 19, 0));
+		mapa.add(new Tupla(18, IZQUIERDA, 19, 0));
+		mapa.add(new Tupla(18, IZQUIERDA, 19, 0));
+		mapa.add(new Tupla(18, IZQUIERDA, 19, 0));
 */
+		
         while (ciclos < ciclosMaximos)
         {
             for (int i = 0; i < mapa.size(); i++)
